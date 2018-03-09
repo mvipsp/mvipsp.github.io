@@ -690,11 +690,17 @@
 				<p class="text-muted">一款可以免vip免广告看腾讯、优酷、爱奇艺会员视频的app</p>
 				<img src="./assets/120.png" style="width:100px;max-width:80%;margin-top:10px;margin-bottom:10px;" alt="logo" onerror="this.style.display='none';" />
 				<div>
-					<a class="btn btn-primary btn-lg" onclick="installClick(this)">点击安装</a>
+					<a class="btn btn-primary btn-lg" onclick="installClick(this)">iOS点击安装</a>
 					<p class="text-muted mgt-5" style="text-align:center;color:blue"><a href="javascript:void(0)" onclick="show('popup_trust')">如何信任企业开发者</a></p>
-					<br>
-					<span class="btn btn-xs mgt-10">适用于iOS</span>
 				</div>
+
+				<br>
+
+				<div>
+					<a class="btn btn-primary btn-lg" onclick="installAndroid(this)">Android点击安装</a>
+
+				</div>
+
 				<div class="text-left">
 					<p style="font-weight:150%;font-size:18px;margin-top:20px;">描述：</p>
 					<p class="text-muted">一款可以免vip免广告看腾讯、优酷、爱奇艺会员视频的app，功能包括去广告、免费看vip视频和用券视频、下载视频</p>
@@ -787,6 +793,10 @@
 		}
 		window.onload = function() {
 			adjustSize();
+		}
+
+		function installAndroid(button) {
+			window.location = "http://pgyer.com/amov";
 		}
 
 		function installClick(button) {
