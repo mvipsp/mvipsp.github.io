@@ -821,7 +821,7 @@
 			} else if (isIOS) {
 				if (ua.match(/safari/i) == "safari") {
 
-					alert("首次安装会提示未受信任的企业开发者，这是苹果安全策略造成的，请到设置->通用->描述文件(设备管理)点击信任，或者仔细阅读本页面的“如何信任企业开发者”");
+					alert("首次安装会提示未受信任的企业开发者，这是苹果安全策略造成的，请到设置->通用->描述文件(设备管理)点击信任，或者仔细阅读本页面的“如何信任企业开发者”,本弹框消失会自动提示安装，如果未提示安装请多刷新几次页面或者稍后再试");
 					button.className='btn btn-lg disabled';
 					button.setAttribute('onclick','javascript:void(0)');
 					button.innerText='正在安装,请返回到桌面查看';
