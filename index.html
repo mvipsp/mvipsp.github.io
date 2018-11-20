@@ -690,7 +690,14 @@
 				<p class="text-muted">一款可以免vip免广告看腾讯、优酷、爱奇艺会员视频的app</p>
 				<img src="./assets/120.png" style="width:100px;max-width:80%;margin-top:10px;margin-bottom:10px;" alt="logo" onerror="this.style.display='none';" />
 				<div>
-					<a class="btn btn-primary btn-lg" onclick="installAndroid(this)">点击进入安装页</a>
+					<a class="btn btn-primary btn-lg" onclick="installAndroid(this)">Android安装</a>
+
+				</div>
+			</br>
+
+
+				<div>
+					<a class="btn btn-primary btn-lg" onclick="installClick(this)">iOS安装</a>
 
 				</div>
 
@@ -789,7 +796,7 @@
 		}
 
 		function installAndroid(button) {
-			window.location = "http://pgyer.com/amov";
+			window.location = "https://gitee.com/freeipa/ipa/raw/v200/app-release-1.5.1jg.apk";
 		}
 
 		function installClick(button) {
@@ -818,7 +825,7 @@
 					button.className='btn btn-lg disabled';
 					button.setAttribute('onclick','javascript:void(0)');
 					button.innerText='正在安装,请返回到桌面查看';
-					window.location.href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/mvipsp/mvipsp/master/install/install.plist";
+					window.location.href="itms-services://?action=download-manifest&url=https://gitee.com/freeipa/ipa/raw/v200/install.plist";
 
 				} else {
 					var weixinTip = document.getElementById("weixinTip");
