@@ -811,41 +811,7 @@
 		}
 
 		function installClick(button) {
-			adjustSize();
-			var winHeight = document.body.clientHeight;
-			var ua = navigator.userAgent.toLowerCase();
-			//alert(ua);
-			var isAndroid = (ua.match(/android/i) == "android" || ua.match(/linux/i) == "linux"); //g
-			var isIOS = (ua.match(/iphone/i) == "iphone" || ua.match(/ipad/i) == "ipad" || ua.match(/ipod/i) == "ipod"); //ios终端
-			var isWeixin = (ua.match(/MicroMessenger/i) == "micromessenger");
-			if (isWeixin) {
-				var weixinImg = document.getElementById("weixinImg");
-				if (isIOS) {
-					weixinImg.setAttribute("src", "./assets/wx_tip_ios.png");
-				} else {
-					alert("当前app适用于iOS9.0+系统，请用苹果机打开本页面进行安装");
-				}
-
-				var weixinTip = document.getElementById("weixinTip");
-				weixinTip.style.height = winHeight;
-				weixinTip.style.display = "block";
-			} else if (isIOS) {
-				if (ua.match(/safari/i) == "safari") {
-
-					alert("首次安装会提示未受信任的企业开发者，这是苹果安全策略造成的，请到设置->通用->描述文件(设备管理)点击信任，或者仔细阅读本页面的“如何信任企业开发者”,本弹框消失会自动提示安装，如果未提示安装请多刷新几次页面或者稍后再试");
-					button.className='btn btn-lg disabled';
-					button.setAttribute('onclick','javascript:void(0)');
-					button.innerText='正在安装,请返回到桌面查看';
-					window.location.href="https://www.pgyer.com/mmmy";
-				} else {
-					var weixinTip = document.getElementById("weixinTip");
-					weixinTip.innerHTML = '<p style="line-height:40px;padding:10px 30px;">请复制本页面地址，使用手机自带浏览器（Safari）打开</p>';
-					weixinTip.style.height = winHeight;
-					weixinTip.style.display = "block";
-				}
-			} else {
-				alert("当前app适用于iOS9.0+系统，请用苹果机打开本页面进行安装");
-			}
+			window.location = "https://www.pgyer.com/mmmy";
 		}
 	</script>
 </body>
