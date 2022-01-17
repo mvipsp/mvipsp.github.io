@@ -1,0 +1,105 @@
+<html>
+    <title>超级大红包 | 淘宝</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no, email=no">
+
+    <style type="text/css">
+    body {
+        background: #F6F5F7;
+    }
+    .imgContainer {
+        padding: 0 16px;
+        margin-top: 14px;
+    }
+    .imgContainer img {
+        width: 100%;
+        height: auto;
+        box-shadow: 0px 3px 12px rgba(21, 0, 71, 0.16);
+    }
+    .beatWord {
+        text-align: center;
+        margin: 14px;
+        margin-top: 20px;
+    }
+    .fieldset {
+        padding: 0.8em;
+        margin: 0 2px;
+        border: 1px dashed #f54d23;
+        background: #fff;
+    }
+    .legend {
+        background: #f54d23;
+        border: none;
+        font-size: 0.8rem;
+        line-height: 20px;
+        color: #fff;
+        padding: 0 4px;
+        top: -20px;
+        position: relative;
+    }
+    .itemCopy {
+        border: none;
+        font-size: 16px;
+        padding: 6px 15px;
+        background: #f60;
+        display: inline-block;
+        margin: 10px auto;
+        border-radius: 16px;
+        color: #fff;
+    }
+    .itemWord {
+        font-size: 12px;
+        top: -10px;
+        position: relative;
+    }
+    </style>
+    <body>
+        <div class="beatWord">
+            <div class="fieldset">
+                <div id="copy_tip" class="legend">长按框内&gt;全选&gt;复制&gt;打开淘宝</div>
+                <p id="itemWord" class="itemWord"><span id="klTxt">复制框内整段文字，打开「淘宝」即可「领取秘券」并下单</span><span id="koulin">&nbsp;6.0fu置文本￥gkAXc7wwKhu￥达开👉ta0.寶👈或點击炼接 https://m.tb.cn/h.4bx7F4g 至瀏lan嘂..【2020天猫双11—主会场（全球好货预售，最高领1111元红I包！）】</span>
+                </p>
+            </div>
+            <div type="button" data-clipboard-text="6.0fu置文本￥gkAXc7wwKhu￥达开👉ta0.寶👈或點击炼接 https://m.tb.cn/h.4bx7F4g 至瀏lan嘂..【2020天猫双11—主会场（全球好货预售，最高领1111元红I包！）】" class="itemCopy" id="itemCopy">一键复制</div>
+        </div>
+        <div class="imgContainer"><img id="img" src="https://external-30160.picsz.qpic.cn/1ac90480e34e71fdd23087ba0c1f9222"></div>
+    </body>
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://lib.baomitu.com/clipboard.js/1.6.1/clipboard.min.js"></script>
+    <script>
+        function copy_code(){
+            var clipboard = new Clipboard('.itemCopy');
+            clipboard.on('success',function(e) {
+                if (e.trigger.disabled == false || e.trigger.disabled == undefined) {
+                    e.trigger.innerHTML = "复制成功，打开淘宝下单";
+                    e.trigger.style.backgroundColor = "#9ED29E";
+                    e.trigger.style.borderColor = "#9ED29E";
+                    e.trigger.disabled = true;
+                    setTimeout(function() {
+                            e.trigger.innerHTML = "一键复制";
+                            e.trigger.style.backgroundColor = "#f54d23";
+                            e.trigger.style.borderColor = "#f54d23";
+                            e.trigger.disabled = false;
+                        },
+                        2000);
+                }
+            });
+            clipboard.on('error',function(e) {
+                e.trigger.innerHTML = "复制失败,请手动复制";
+                e.trigger.style.backgroundColor = "#8f8f8f";
+                e.trigger.style.borderColor = "#8f8f8f";
+            });
+        }
+
+        $(function() {
+            $("#itemCopy").click(function () {
+                copy_code();
+            });
+        })
+    </script>
+
+</html>
